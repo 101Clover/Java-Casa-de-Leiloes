@@ -12,7 +12,6 @@ A casa de leilões - Eorzea, é um projeto designado pelo Senac, no curso de des
 
 - Java
 - MySQL
-- JDBC
 - Git/GitHub
   
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7FFF00&height=120&section=footer"/>
