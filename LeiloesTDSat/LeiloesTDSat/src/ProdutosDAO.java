@@ -22,16 +22,25 @@ public class ProdutosDAO {
     ResultSet resultset;
     ArrayList<ProdutosDTO> listagem = new ArrayList<>();
     
-    public void cadastrarProduto (ProdutosDTO produto){
+    public boolean cadastrarProduto (ProdutosDTO produto){
         
         
         conn = new conectaDAO().connectDB();
         
-        
+       return true; 
     }
     
     public ArrayList<ProdutosDTO> listarProdutos(){
         
+        ProdutosDTO p = new ProdutosDTO (10, "PS5", 4000, "A venda");
+        
+        listagem.add(p);
+        listagem.add(p);
+        listagem.add(p);
+        listagem.add(p);
+        listagem.add(p);
+        listagem.add(p);
+                
         return listagem;
     }
     
