@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -219,6 +220,8 @@ public class listagemVIEW extends javax.swing.JFrame {
                 });
             }
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Ocorreu um erro ao tentar exibir os produtos: " + e.getMessage(), "Erro na Listagem", JOptionPane.ERROR_MESSAGE);
+         e.printStackTrace();
         }
     
     }
