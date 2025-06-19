@@ -1,10 +1,9 @@
-
 import java.sql.PreparedStatement;
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class ProdutosDAO {
@@ -12,7 +11,6 @@ public class ProdutosDAO {
     Connection conn;
     PreparedStatement prep;
     ResultSet resultset;
-     ArrayList<ProdutosDTO> listagem = new ArrayList<>();
      
         //Cadastra um novo produto no banco de dados.
         public boolean cadastrarProduto(ProdutosDTO produto) {
@@ -56,6 +54,8 @@ public class ProdutosDAO {
         }
     }
 
+        
+     
     
     public ArrayList<ProdutosDTO> listarProdutos(){
         

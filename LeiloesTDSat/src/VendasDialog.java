@@ -3,13 +3,12 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.ArrayList;
 
-
-public class VendasDialog extends javax.swing.JFrame {
+public class VendasDialog extends javax.swing.JDialog {
     
     private ProdutosDAO produtosDAO;
     private DefaultTableModel modelTabela; 
     private JTable tabelaVendas;
-  
+
     public VendasDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         
@@ -36,14 +35,6 @@ public class VendasDialog extends javax.swing.JFrame {
         setLocationRelativeTo(parent); // Centraliza em relação à janela pai
     }
 
-    private VendasDialog(Frame parent, boolean modal) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private VendasDialog(Frame parent, boolean modal) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
     /**
      * Configura e adiciona os componentes personalizados da UI ao diálogo.
      * Este método é chamado após o initComponents() gerado pelo NetBeans.
@@ -79,7 +70,8 @@ public class VendasDialog extends javax.swing.JFrame {
         // contentPane.repaint();
         pack(); // Importante chamar pack() AQUI para que o JDialog se ajuste aos novos componentes
     }
-/**
+
+    /**
      * Busca os produtos vendidos no DAO e os exibe na tabela.
      */
     private void listarProdutosVendidosNaTela() {
@@ -111,12 +103,12 @@ public class VendasDialog extends javax.swing.JFrame {
             }
         }
     }
-   
-    @SuppressWarnings("unchecked")
+
+     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,8 +124,34 @@ public class VendasDialog extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
-     
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VendasDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VendasDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VendasDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VendasDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 VendasDialog dialog = new VendasDialog(new javax.swing.JFrame(), true);
